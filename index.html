@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
-
+#loaded{
+    display: none;
+}
         #loading{
             width: 100vw;
             height: 100vh;
@@ -61,7 +63,13 @@
 </head>
 <body>
     <div id="loading">
-        <div id="dots_box"><div class="loadingText">Loading the page </div>&nbsp;&nbsp;<div class="dots" style="animation-delay: 0s;"> 🟢</div><div class="dots" style="animation-delay: .3s;">🔴</div><div class="dots" style="animation-delay: .6s;">🟠</div></div>
+        <div id="dots_box">
+            <div class="loadingText">Loading the page </div>
+            &nbsp;&nbsp;
+            <div class="dots" style="animation-delay: 0s;"> 🟢</div>
+            <div class="dots" style="animation-delay: .3s;">🔴</div>
+            <div class="dots" style="animation-delay: .6s;">🟠</div>
+        </div>
     </div>
 <div id="loaded">
     <div class="navBox switchThem">
