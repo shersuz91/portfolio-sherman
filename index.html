@@ -6,9 +6,64 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+        #loading{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+           
+        }
+        #loading #dots_box{
+            display: flex;
+            align-items: center;
+            color: transparent;
+            background-image: radial-gradient(circle at center, white , rgb(194, 189, 189) 20%, rgb(85, 79, 79) 50% , black 90%);
+            background-clip: text;
+            background-size: 200%;
+            -webkit-background-clip:text;
+            animation: hover_ 2s ease-in-out  infinite forwards alternate;
+        }
+        #loading #dots_box > div{
+            display: inline;
+        }
+       @keyframes hover_{
+        from{
+            background-position: left;
+        }
+        to{
+            background-position: right;
+        }
+       }
+       .dots{
+         display: inline-block;
+         height: 50px;
+         line-height: 80px;
+        animation: dots_ 1s ease-in-out infinite alternate;
+       }
+       @keyframes dots_{
+        from{
+            line-height: 80px;
+            color: red;
+        }
+        to{
+            line-height: 20px;
+        }
+       }
+    </style>
 </head>
 <body>
-
+    <div id="loading">
+        <div id="dots_box"><div class="loadingText">Loading the page </div>&nbsp;&nbsp;<div class="dots" style="animation-delay: 0s;"> 🟢</div><div class="dots" style="animation-delay: .3s;">🔴</div><div class="dots" style="animation-delay: .6s;">🟠</div></div>
+    </div>
+<div id="loaded">
     <div class="navBox switchThem">
         
         <button id="bar_btn" barBtn><i class="fa-solid fa-bars" barBtn></i></button>
@@ -380,7 +435,7 @@
     <footer class="switchThem" >
         <p class="p_desc">&copy; 2026 Sherman Hamo Rasho. All rights reserved.</p>
     </footer>
-    
+</div>
 <script type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
