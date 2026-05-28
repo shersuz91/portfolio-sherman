@@ -6,7 +6,14 @@ const darkTheme = document.getElementsByClassName("darkTheme")
 const lightTheme = document.getElementsByClassName("lightTheme")
 const switchThem = document.querySelectorAll(".switchThem")
 const codeSkill = document.querySelectorAll(".codeSkill span")
+var loading = document.getElementById("loading")
+var loaded = document.getElementById("loaded")
 
+window.addEventListener("load", function(){
+loading.style.display="none"
+loading.remove()
+loaded.style.display="block"
+})
 document.getElementById('form').addEventListener('submit', function(event) {
    event.preventDefault();
 
